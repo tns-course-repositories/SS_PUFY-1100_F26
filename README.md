@@ -1,0 +1,1 @@
+## Course Repository for Sustainable Systems PUFY 1100 - Fall 2026. The New School, NYC. © 2026 by Stephen Metts | licensed under CC BY-NC-SA 4.0.  See License File Located in Repository. 
