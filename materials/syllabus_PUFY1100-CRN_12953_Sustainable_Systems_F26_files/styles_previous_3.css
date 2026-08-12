@@ -84,43 +84,27 @@ a.external:after {
 
 @media print {
 
-  /* Keep headings attached to the content that follows */
+  /* Prevent awkward page breaks */
   h1, h2, h3 {
-    break-after: avoid;
     page-break-after: avoid;
   }
 
-  /*
-    Keep ordinary tables, figures, and callouts together when practical.
-    Long .compact-schedule tables are explicitly allowed to span pages below.
-  */
   table,
   figure,
   .callout {
-    break-inside: avoid;
     page-break-inside: avoid;
   }
 
-  tr,
+  tr {
+    page-break-inside: avoid;
+  }
+
   .no-break {
-    break-inside: avoid;
     page-break-inside: avoid;
   }
 
-  /* Explicit Markdown/Quarto page-break helper */
   .page-break {
-    break-before: page;
     page-break-before: always;
-  }
-
-  /*
-    Reduce isolated lines at page tops/bottoms.
-    Browser support varies, but these rules are harmless where unsupported.
-  */
-  p,
-  li {
-    orphans: 3;
-    widows: 3;
   }
 
   /* Preserve link styling in print */
@@ -253,50 +237,6 @@ a.external:after {
 
 .compact-schedule tr:nth-child(even) {
   background-color: #fafafa;
-}
-
-
-/*
-  PRINT BEHAVIOR FOR LONG SCHEDULE / ASSIGNMENT TABLES
-  Allow the table to continue across pages while keeping individual rows intact.
-  Repeat the header row on each printed page where the browser supports it.
-*/
-@media print {
-
-  .compact-schedule {
-    width: 100%;
-    max-width: 100%;
-    overflow: visible;
-  }
-
-  .compact-schedule table {
-    width: 100%;
-    max-width: 100%;
-    break-inside: auto;
-    page-break-inside: auto;
-  }
-
-  .compact-schedule thead {
-    display: table-header-group;
-  }
-
-  .compact-schedule tbody {
-    display: table-row-group;
-  }
-
-  .compact-schedule tr {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  .compact-schedule th,
-  .compact-schedule td {
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: normal;
-    hyphens: auto;
-  }
-
 }
 
 
