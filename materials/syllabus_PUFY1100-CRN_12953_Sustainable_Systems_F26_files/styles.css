@@ -400,3 +400,9 @@ a.external:after {
     table-layout: fixed !important;
   }
 }
+
+
+.compact-schedule td:first-child {
+  font-size: 0.82em;
+  line-height: 1.2;
+}
