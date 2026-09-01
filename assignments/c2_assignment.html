@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-09-01">
+
+<title>Sustainable Systems Fall 2026: Class 2 Assignment</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="c2_assignment_files/libs/clipboard/clipboard.min.js"></script>
+<script src="c2_assignment_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="c2_assignment_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="c2_assignment_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="c2_assignment_files/libs/quarto-html/popper.min.js"></script>
+<script src="c2_assignment_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="c2_assignment_files/libs/quarto-html/anchor.min.js"></script>
+<link href="c2_assignment_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="c2_assignment_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="c2_assignment_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="c2_assignment_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="c2_assignment_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="c2_assignment_files/styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#part-i-in-class-assignment-2-getting-started-with-mapping---geolibre" id="toc-part-i-in-class-assignment-2-getting-started-with-mapping---geolibre" class="nav-link active" data-scroll-target="#part-i-in-class-assignment-2-getting-started-with-mapping---geolibre">🌐 Part I: In-Class Assignment 2 | Getting Started with Mapping - GeoLibre</a>
+  <ul class="collapse">
+  <li><a href="#assignment-overview" id="toc-assignment-overview" class="nav-link" data-scroll-target="#assignment-overview">Assignment Overview</a></li>
+  <li><a href="#geolibre-geographic-coordinates" id="toc-geolibre-geographic-coordinates" class="nav-link" data-scroll-target="#geolibre-geographic-coordinates">🧭 GeoLibre + Geographic Coordinates</a></li>
+  <li><a href="#consider-while-you-work" id="toc-consider-while-you-work" class="nav-link" data-scroll-target="#consider-while-you-work">💭 Consider While You Work</a></li>
+  <li><a href="#energy-vectors-seeing-the-network" id="toc-energy-vectors-seeing-the-network" class="nav-link" data-scroll-target="#energy-vectors-seeing-the-network">🔗 Energy Vectors | Seeing the Network</a></li>
+  <li><a href="#consider-while-you-work-1" id="toc-consider-while-you-work-1" class="nav-link" data-scroll-target="#consider-while-you-work-1">💭 Consider While You Work</a></li>
+  <li><a href="#global-extraction-landscapes" id="toc-global-extraction-landscapes" class="nav-link" data-scroll-target="#global-extraction-landscapes">🛰️ Global Extraction Landscapes</a></li>
+  <li><a href="#consider-while-you-work-2" id="toc-consider-while-you-work-2" class="nav-link" data-scroll-target="#consider-while-you-work-2">💭 Consider While You Work</a></li>
+  </ul></li>
+  <li><a href="#part-i-assignment-ii-nyc-gas-infrastructure-forensics" id="toc-part-i-assignment-ii-nyc-gas-infrastructure-forensics" class="nav-link" data-scroll-target="#part-i-assignment-ii-nyc-gas-infrastructure-forensics">🏙️ Part I Assignment II | NYC Gas Infrastructure Forensics</a>
+  <ul class="collapse">
+  <li><a href="#assignment-overview-1" id="toc-assignment-overview-1" class="nav-link" data-scroll-target="#assignment-overview-1">Assignment Overview</a></li>
+  <li><a href="#what-to-submit" id="toc-what-to-submit" class="nav-link" data-scroll-target="#what-to-submit">📤 What to Submit</a></li>
+  <li><a href="#final-check" id="toc-final-check" class="nav-link" data-scroll-target="#final-check">🔎 Final Check</a></li>
+  <li><a href="#part-iii-class-1-readings" id="toc-part-iii-class-1-readings" class="nav-link" data-scroll-target="#part-iii-class-1-readings">📚 Part III: Class 1 Readings</a></li>
+  <li><a href="#consider-while-you-read" id="toc-consider-while-you-read" class="nav-link" data-scroll-target="#consider-while-you-read">💭 Consider While You Read</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Sustainable Systems Fall 2026: Class 2 Assignment</h1>
+<p class="subtitle lead"><a href="https://courses.newschool.edu/courses/PUFY1100">PUFY 1100 A31 Sustainable Systems 12953</a></p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 1, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="part-i-in-class-assignment-2-getting-started-with-mapping---geolibre" class="level2">
+<h2 class="anchored" data-anchor-id="part-i-in-class-assignment-2-getting-started-with-mapping---geolibre">🌐 Part I: In-Class Assignment 2 | Getting Started with Mapping - GeoLibre</h2>
+<section id="assignment-overview" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-overview">Assignment Overview</h3>
+<p>In this guided in-class exercise, we will use GeoLibre to explore how spatial data and satellite imagery can make otherwise difficult-to-see energy systems visible. We will begin by locating Spiral Jetty through geographic coordinates, using it to become familiar with navigating and changing scale in a web-based mapping environment. We will then download and load spatial data representing fossil-fuel infrastructure and use satellite imagery to investigate several intensive extraction landscapes around the world. By moving between coordinates, spatial data, and imagery, we will examine the upstream networks of fossil fuels—from extraction sites to pipelines—and consider how different forms of representation allow us to see systems that are often largely invisible in everyday life.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>GeoLibre Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Navigate to <a href="https://geolibre.app/">GeoLibre</a> - https://geolibre.app/ - to start. Under <em>Getting Started</em>, you can <a href="https://web.geolibre.app/">initiate</a> the web browser version of the software for our in class Assignment Part I. Later feel free to <a href="https://geolibre.app/downloads/">download</a> the application for desktop use.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="c2_assignment_files/img/landing.png" class="img-fluid figure-img"></p>
+<figcaption>GeoLibre Landing Page</figcaption>
+</figure>
+</div>
+</section>
+<section id="geolibre-geographic-coordinates" class="level3">
+<h3 class="anchored" data-anchor-id="geolibre-geographic-coordinates">🧭 GeoLibre + Geographic Coordinates</h3>
+<p>Geographic coordinates allow us to locate a precise position on the Earth’s surface. A coordinate pair is expressed as <strong>latitude</strong> and <strong>longitude</strong>:</p>
+<ul>
+<li><strong>Latitude</strong> measures position north or south of the Equator.</li>
+<li><strong>Longitude</strong> measures position east or west of the Prime Meridian.</li>
+<li>In decimal degrees, locations south of the Equator and west of the Prime Meridian are expressed as negative numbers.</li>
+</ul>
+<p>We will use <strong>Spiral Jetty</strong> as our first location to become familiar with geographic coordinates and navigating within GeoLibre.</p>
+<section id="open-geolibre" class="level4">
+<h4 class="anchored" data-anchor-id="open-geolibre">01 | Open GeoLibre</h4>
+<p>Open the <strong>GeoLibre web application</strong> in your browser.</p>
+</section>
+<section id="locate-spiral-jetty" class="level4">
+<h4 class="anchored" data-anchor-id="locate-spiral-jetty">02 | Locate Spiral Jetty</h4>
+<p>Use the following coordinate pair to navigate to <strong>Robert Smithson’s Spiral Jetty</strong> on the northeastern shore of Great Salt Lake, Utah:</p>
+<p><strong>41.4375, -112.6689</strong></p>
+<p>Remember that coordinates are entered in this order:</p>
+<p><strong>Latitude, Longitude</strong></p>
+</section>
+<section id="change-your-scale" class="level4">
+<h4 class="anchored" data-anchor-id="change-your-scale">03 | Change Your Scale</h4>
+<p>Change the basemap to <strong>ESRI World Imagery</strong> via the <code>Basemaps Plugin</code> and return to Spiral Jetty.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="c2_assignment_files/img/plugin.png" class="img-fluid figure-img"></p>
+<figcaption>Activate the Basemaps Plugin</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="consider-while-you-work" class="level3">
+<h3 class="anchored" data-anchor-id="consider-while-you-work">💭 Consider While You Work</h3>
+<ul>
+<li>At what scale does Spiral Jetty first become visible?</li>
+<li>What relationships become visible when you zoom <strong>out</strong>?</li>
+<li>What details become visible when you zoom <strong>in</strong>?</li>
+<li>What does satellite imagery reveal that a conventional map does not?</li>
+</ul>
+</section>
+<section id="energy-vectors-seeing-the-network" class="level3">
+<h3 class="anchored" data-anchor-id="energy-vectors-seeing-the-network">🔗 Energy Vectors | Seeing the Network</h3>
+<p>Energy moves between places. Extraction sites, gathering systems, processing facilities, transmission pipelines, and points of consumption form networks that can extend across enormous distances.</p>
+<p>We will now use <strong>vector spatial data</strong> to make part of this network visible. Rather than looking at individual places through satellite imagery, we will first zoom out and examine fossil-fuel infrastructure as a connected geographic system.</p>
+<section id="download-the-spatial-data" class="level4">
+<h4 class="anchored" data-anchor-id="download-the-spatial-data">01 | Download the Spatial Data</h4>
+<p>Download the spatial-data <code>.zip</code> files from the direct download links:</p>
+<ul>
+<li><a href="https://pufy-1100-ss.s3.us-east-1.amazonaws.com/data/EIA_pipelines.zip">EIA Dataset</a></li>
+<li><a href="https://pufy-1100-ss.s3.us-east-1.amazonaws.com/data/PA_Gathering_Pipes.zip">PA Pipes</a></li>
+<li><a href="https://pufy-1100-ss.s3.us-east-1.amazonaws.com/data/PA_Gathering_Pads.zip">PA Pads</a></li>
+</ul>
+<p>For this exercise we will work with:</p>
+<ul>
+<li><strong>U.S. Energy Information Administration (EIA) — Natural Gas Pipelines</strong></li>
+<li><strong>Pennsylvania — Natural Gas Pipelines</strong></li>
+<li><strong>Pennsylvania — Oil + Gas Well Pads</strong></li>
+</ul>
+<p>Keep each dataset as a <strong><code>.zip</code> file</strong>. GeoLibre can load the spatial data directly from the compressed file.</p>
+</section>
+<section id="load-a-vector-layer" class="level4">
+<h4 class="anchored" data-anchor-id="load-a-vector-layer">02 | Load a Vector Layer</h4>
+<p>In GeoLibre:</p>
+<ol type="1">
+<li>Select <strong>Add Data</strong>.</li>
+<li>Select the downloaded <code>.zip</code> file.</li>
+<li>Add the dataset to your map.</li>
+<li>Confirm that the new layer appears in the <strong>Layers</strong> panel.</li>
+</ol>
+<p>Begin with the <strong>EIA Natural Gas Pipelines</strong> dataset.</p>
+<p>Zoom out until you can see the larger geographic extent of the pipeline network.</p>
+</section>
+<section id="turn-layers-on-off" class="level4">
+<h4 class="anchored" data-anchor-id="turn-layers-on-off">03 | Turn Layers On + Off</h4>
+<p>Use the <strong>Layers</strong> panel to turn the pipeline layer <strong>on and off</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="c2_assignment_files/img/layers.png" class="img-fluid figure-img"></p>
+<figcaption>Layer Panel</figcaption>
+</figure>
+</div>
+<p>Pay attention to how dramatically the representation of the territory changes when the infrastructure is visible.</p>
+<p>Then add the Pennsylvania pipeline and well-pad datasets.</p>
+<p>Turn the layers on and off individually and in combination.</p>
+</section>
+<section id="change-the-symbology" class="level4">
+<h4 class="anchored" data-anchor-id="change-the-symbology">04 | Change the Symbology</h4>
+<p>Select one of the vector layers and open its <strong>Style</strong> controls.</p>
+<p>Experiment with changing its appearance:</p>
+<ul>
+<li>line color</li>
+<li>line width</li>
+<li>point size</li>
+<li>point color</li>
+</ul>
+<p>Your goal is not simply to make the map attractive. Change the symbology so that the different parts of the energy system can be <strong>read clearly in relation to one another</strong>.</p>
+</section>
+<section id="move-through-the-network" class="level4">
+<h4 class="anchored" data-anchor-id="move-through-the-network">05 | Move Through the Network</h4>
+<p>Begin at the scale of the larger U.S. pipeline system and progressively zoom toward Pennsylvania.</p>
+<p>Look for the transition between:</p>
+<p><strong>EXTRACTION → GATHERING → TRANSMISSION</strong></p>
+<p>Notice how the appearance of the network changes as you change scale.</p>
+</section>
+</section>
+<section id="consider-while-you-work-1" class="level3">
+<h3 class="anchored" data-anchor-id="consider-while-you-work-1">💭 Consider While You Work</h3>
+<ul>
+<li>At what scale does the energy network become visible?</li>
+<li>What does the vector data allow you to see that would be difficult to recognize from satellite imagery alone?</li>
+<li>What happens to your understanding of the landscape when you turn the infrastructure layers off?</li>
+<li>How do well pads, gathering infrastructure, and larger transmission pipelines relate spatially?</li>
+</ul>
+</section>
+<section id="global-extraction-landscapes" class="level3">
+<h3 class="anchored" data-anchor-id="global-extraction-landscapes">🛰️ Global Extraction Landscapes</h3>
+<p>We have used vector data to visualize fossil-fuel infrastructure as a network. We will now shift from <strong>vector data to satellite imagery</strong> and examine several places where fossil fuels are physically extracted from the Earth.</p>
+<p>Each coordinate below places you within a major extraction landscape. Rather than looking for a single object, explore the surrounding territory and look for the <strong>spatial patterns and physical evidence produced by extraction</strong>.</p>
+<section id="switch-to-satellite-imagery" class="level4">
+<h4 class="anchored" data-anchor-id="switch-to-satellite-imagery">01 | Switch to Satellite Imagery</h4>
+<p>Change the GeoLibre basemap to <strong>ESRI World Imagery</strong>.</p>
+<p>Turn off the vector layers from the previous exercise so that you can concentrate on the physical landscape visible in the satellite imagery.</p>
+</section>
+<section id="explore-the-extraction-sites" class="level4">
+<h4 class="anchored" data-anchor-id="explore-the-extraction-sites">02 | Explore the Extraction Sites</h4>
+<p>Copy and paste each <strong>Latitude, Longitude</strong> coordinate pair into GeoLibre, one at a time. Explore each site separately.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="c2_assignment_files/img/coordinates.png" class="img-fluid figure-img"></p>
+<figcaption>Coordinate search under layers panel in GeoLibre</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extraction Site</th>
+<th>Coordinate Pair</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Athabasca Tar Sands, Alberta, Canada</strong></td>
+<td><code>57.0570, -111.6000</code></td>
+</tr>
+<tr class="even">
+<td><strong>Permian Basin, Texas, USA</strong></td>
+<td><code>31.9700, -102.1500</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Niger Delta Flare Example, Nigeria</strong></td>
+<td><code>5.65941, 6.51503</code></td>
+</tr>
+<tr class="even">
+<td><strong>Burgan Field, Kuwait</strong></td>
+<td><code>28.9583, 48.0667</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Haerwusu Coal Mine, China</strong></td>
+<td><code>39.7380, 111.2380</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="change-your-scale-1" class="level4">
+<h4 class="anchored" data-anchor-id="change-your-scale-1">03 | Change Your Scale</h4>
+<p>At each location, begin close to the coordinate and then progressively zoom <strong>out</strong>.</p>
+<p>Do not simply identify the extraction site. Look at how the infrastructure occupies and reorganizes the surrounding territory.</p>
+<p>Pay attention to:</p>
+<ul>
+<li>excavation and removal of land</li>
+<li>wells and drilling pads</li>
+<li>roads and access networks</li>
+<li>pipelines and linear infrastructure</li>
+<li>processing and storage facilities</li>
+<li>flaring and combustion</li>
+<li>repetition and concentration</li>
+<li>relationships to settlements, agriculture, water, and other landscapes</li>
+</ul>
+</section>
+</section>
+<section id="consider-while-you-work-2" class="level3">
+<h3 class="anchored" data-anchor-id="consider-while-you-work-2">💭 Consider While You Work</h3>
+<ul>
+<li>What evidence of extraction can you identify?</li>
+<li>At what scale does extraction become most visible?</li>
+<li>What spatial patterns does extraction produce?</li>
+<li>How does the landscape change as you move outward from the extraction site?</li>
+<li>What becomes visible as you zoom out? What disappears?</li>
+<li>How does seeing the physical extraction landscape change your understanding of the vector networks we examined earlier?</li>
+</ul>
+</section>
+</section>
+<section id="part-i-assignment-ii-nyc-gas-infrastructure-forensics" class="level2">
+<h2 class="anchored" data-anchor-id="part-i-assignment-ii-nyc-gas-infrastructure-forensics">🏙️ Part I Assignment II | NYC Gas Infrastructure Forensics</h2>
+<section id="assignment-overview-1" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-overview-1">Assignment Overview</h3>
+<p>Much of New York City’s energy infrastructure operates beneath the street and is largely invisible during everyday life. In this <strong>forensic investigation</strong>, you will use visible traces, street markings, open excavations, and other physical evidence to identify gas infrastructure hidden below the street.</p>
+<p>Your task is to <strong>observe, document, and interpret</strong> this evidence while distinguishing the gas system from the other infrastructure systems occupying the same space.</p>
+<section id="review-the-field-guides" class="level4">
+<h4 class="anchored" data-anchor-id="review-the-field-guides">01 | Review the Field Guides</h4>
+<p>Before beginning your investigation, review the following two field guides:</p>
+<p><strong>Gas Flows Below</strong> — Nicholas Pevzner, <em>Urban Omnibus</em><br>
+<a href="https://urbanomnibus.net/2018/09/gas-flows-below/" class="uri">https://urbanomnibus.net/2018/09/gas-flows-below/</a></p>
+<p><strong>Why Are There Street Markings All Over New York City?</strong> — <em>The New York Times</em><br>
+<a href="https://www.nytimes.com/video/arts/100000011086535/why-are-there-street-markings-all-over-new-york-city.html" class="uri">https://www.nytimes.com/video/arts/100000011086535/why-are-there-street-markings-all-over-new-york-city.html</a></p>
+<p>Use these sources to familiarize yourself with the visual language of NYC utility markings and the different infrastructure systems they identify.</p>
+</section>
+<section id="find-a-site" class="level4">
+<h4 class="anchored" data-anchor-id="find-a-site">02 | Find a Site</h4>
+<p>Walk through your neighborhood and locate <strong>one site</strong> where you can identify evidence of underground gas infrastructure.</p>
+<p>Look for either:</p>
+<ul>
+<li>an <strong>open street cut or excavation</strong> where underground infrastructure is physically exposed, <strong>or</strong></li>
+<li><strong>street markings</strong> that indicate the location of gas infrastructure beneath the pavement.</li>
+</ul>
+<p>NYC streets contain overlapping systems for gas, electricity, telecommunications, water, sewer, steam, and other infrastructure. Your goal is <strong>not simply to find utility markings</strong>. You must find and identify evidence belonging specifically to the <strong>gas system</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>Safety:</strong> Do not enter a construction area, excavation, work zone, or restricted area. Make all observations and photographs from a public sidewalk or other safe public location. Make sure NOT to put yourself at risk; always be aware of your surroundings at/near the street.</p>
+</blockquote>
+</section>
+<section id="identify-the-gas-infrastructure" class="level4">
+<h4 class="anchored" data-anchor-id="identify-the-gas-infrastructure">03 | Identify the Gas Infrastructure</h4>
+<p>Study the markings and other physical evidence at your site carefully.</p>
+<p><strong>Yellow/Orange markings generally identify gas infrastructure</strong>, but color alone is not sufficient evidence. Look closely for:</p>
+<ul>
+<li>letters + abbreviations</li>
+<li>lines + arrows</li>
+<li>dimensions</li>
+<li>pipe sizes</li>
+<li>pipe materials</li>
+<li>valves + connections</li>
+<li>other written or physical clues</li>
+</ul>
+<p>Use the assigned field guides to investigate what these markings mean.</p>
+<p>Also look for evidence of <strong>other infrastructure systems</strong> at the same location. Separate the evidence belonging to the gas system from the other utilities occupying the street.</p>
+</section>
+<section id="photo-document-the-site" class="level4">
+<h4 class="anchored" data-anchor-id="photo-document-the-site">04 | Photo Document the Site</h4>
+<p>Take <strong>2–4 photographs</strong> that document your investigation.</p>
+<p>Include:</p>
+<ul>
+<li>at least <strong>one context photograph</strong> showing the larger street and surrounding conditions.</li>
+<li>at least <strong>one close-up photograph</strong> clearly showing the gas markings or exposed gas infrastructure.</li>
+<li>additional photographs as necessary to document other markings, infrastructure, or evidence important to your interpretation.</li>
+</ul>
+<p>Your photographs should allow someone who has <strong>not visited the site</strong> to understand what you observed and where you observed it.</p>
+</section>
+<section id="record-the-location" class="level4">
+<h4 class="anchored" data-anchor-id="record-the-location">05 | Record the Location</h4>
+<p>Record:</p>
+<ul>
+<li><strong>Borough</strong></li>
+<li><strong>Closest street intersection</strong></li>
+<li><strong>Latitude + Longitude</strong></li>
+</ul>
+<p>Record the geographic coordinates as a single copyable pair:</p>
+<p><code>Latitude, Longitude</code></p>
+<p>For example:</p>
+<p><code>40.7359, -73.9946</code></p>
+<p>Be as precise as possible. The coordinate should identify the location of the infrastructure evidence you photographed, rather than simply the surrounding neighborhood.</p>
+</section>
+<section id="interpret-the-evidence" class="level4">
+<h4 class="anchored" data-anchor-id="interpret-the-evidence">06 | Interpret the Evidence</h4>
+<p>Write a brief <strong>100–150 word forensic analysis</strong> of your site.</p>
+<p>Address the following:</p>
+<ul>
+<li><strong>What evidence tells you that you have located gas infrastructure?</strong></li>
+<li><strong>What do the markings or exposed infrastructure tell you about the system below the street?</strong></li>
+<li><strong>What other infrastructure systems can you identify at the same location?</strong></li>
+<li><strong>How did you distinguish the gas infrastructure from these other systems?</strong></li>
+</ul>
+<p>Use specific evidence from your photographs and the assigned field guides to support your interpretation.</p>
+</section>
+</section>
+<section id="what-to-submit" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-submit">📤 What to Submit</h3>
+<p>Submit <strong>one PDF</strong> containing:</p>
+<ul>
+<li><strong>2–4 site photographs</strong></li>
+<li><strong>Borough</strong></li>
+<li><strong>Closest street intersection</strong></li>
+<li><strong>Latitude + Longitude</strong></li>
+<li><strong>100–150 word forensic analysis</strong></li>
+</ul>
+<p>Clearly identify which photograph or markings you believe represent <strong>gas infrastructure</strong>.</p>
+</section>
+<section id="final-check" class="level3">
+<h3 class="anchored" data-anchor-id="final-check">🔎 Final Check</h3>
+<p>Before submitting, confirm that:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">I documented an <strong>open excavation or visible utility markings</strong>.</label></li>
+<li><label><input type="checkbox">I identified evidence specifically associated with <strong>gas infrastructure</strong>.</label></li>
+<li><label><input type="checkbox">I distinguished the gas system from other visible utility systems.</label></li>
+<li><label><input type="checkbox">I included both a <strong>context photograph</strong> and a <strong>close-up photograph</strong>.</label></li>
+<li><label><input type="checkbox">I recorded the <strong>closest street intersection</strong>.</label></li>
+<li><label><input type="checkbox">I recorded an accurate <strong>Latitude, Longitude</strong> coordinate pair.</label></li>
+<li><label><input type="checkbox">I completed the <strong>100–150 word forensic analysis</strong>.</label></li>
+<li><label><input type="checkbox">I combined the required material into <strong>one PDF</strong>.</label></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Due Wednesday | 09-10-26 | 11:59pm
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Complete the submission using the checklist above. The submission location is at Canvas, noted as <strong>Assignment 2</strong></p>
+</div>
+</div>
+</section>
+<section id="part-iii-class-1-readings" class="level3">
+<h3 class="anchored" data-anchor-id="part-iii-class-1-readings">📚 Part III: Class 1 Readings</h3>
+<p>The following readings provide the conceptual and research framework for our work with energy systems.</p>
+<section id="introduction-manufacturing-ignorance" class="level4">
+<h4 class="anchored" data-anchor-id="introduction-manufacturing-ignorance">01 | Introduction: Manufacturing Ignorance</h4>
+<p><strong>Climate Crisis, Energy Violence</strong><br>
+<em>Introduction: Manufacturing Ignorance</em></p>
+<p><a href="https://pufy-1100-ss.s3.us-east-1.amazonaws.com/readings/section1.pdf">Download Reading 1</a></p>
+<p>Read the complete Introduction.</p>
+<p>As you read, pay particular attention to:</p>
+<ul>
+<li><strong>energy</strong> as both a material and social system</li>
+<li><strong>flow + connectivity</strong></li>
+<li><strong>extraction + infrastructure</strong></li>
+<li>the relationship between <strong>visibility + invisibility</strong></li>
+<li>how energy infrastructure transforms <strong>landscape + place</strong></li>
+</ul>
+<hr>
+</section>
+<section id="chapter-1-research-methods" class="level4">
+<h4 class="anchored" data-anchor-id="chapter-1-research-methods">02 | Chapter 1: Research Methods</h4>
+<p><strong>Climate Crisis, Energy Violence</strong><br>
+<em>Chapter 1: Research Methods</em></p>
+<p><a href="https://pufy-1100-ss.s3.us-east-1.amazonaws.com/readings/section2.pdf">Download Reading 2</a></p>
+<p>Read <strong>pp.&nbsp;2–14</strong>, ending before <strong>Environmental Injustice</strong>.</p>
+<p>Focus on:</p>
+<ul>
+<li><strong>Space + Power</strong></li>
+<li><strong>Energy is Spatial</strong></li>
+<li><strong>Spatializing Infrastructure</strong></li>
+<li><strong>Time Matters</strong></li>
+</ul>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Due Wednesday | 09-10-26 | 11:59pm
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Complete both readings before the deadline.</p>
+<p><strong>There is nothing to submit for this portion of the assignment.</strong> Be prepared for a reading quiz at the beginning of class on <strong>Thursday | 09-11-26</strong>.</p>
+<p>Use the guiding questions below to focus your reading and prepare for the quiz.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="consider-while-you-read" class="level3">
+<h3 class="anchored" data-anchor-id="consider-while-you-read">💭 Consider While You Read</h3>
+<p>Be prepared to define or explain:</p>
+<ol type="1">
+<li><p><strong>Energy transition vs.&nbsp;energy transformation</strong></p></li>
+<li><p><strong>Energy violence</strong> — including <strong>fast violence + slow violence</strong></p></li>
+<li><p><strong>Flow + connectivity</strong></p></li>
+<li><p><strong>Why energy is spatial</strong></p></li>
+<li><p><strong>Spatializing infrastructure</strong> — including <strong>nodes, corridors + proximity</strong></p></li>
+<li><p><strong>Energy vectors</strong> — including <strong>upstream, midstream + downstream</strong></p></li>
+<li><p><strong>Why time matters when analyzing energy infrastructure</strong></p></li>
+</ol>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.quarto\.org\/custom");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<script src="c2_assignment_files/libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
